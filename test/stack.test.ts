@@ -3,17 +3,36 @@ import { Stack } from '~/stack';
 
 describe('My Stack', () => {
 
+    let stack: Stack;
+    beforeEach(() => {
+        stack = new Stack();
+    })
+
     it('is created empty', () => {
-        const stack = new Stack();
 
         expect(stack.top).toBe(-1);
-        expect(stack.items).toEqual([]);
+        expect(stack.items).toEqual({});
 
     });
 
-    it.todo('can push to the top');
+    it('can push to the top', () => {
 
-    it.todo('can pop off');
+        stack.push('hello');
+        expect(stack.top).toBe(0);
+        expect(stack.pop()).toEqual('hello');
+
+    });
+
+    it('can pop off', () => {
+
+        stack.push('alpha');
+        stack.push('beta');
+
+        expect(stack.pop()).toEqual('beta');
+        expect(stack.pop()).toEqual('alpha');
+        expect(stack.top).toBe(-1);
+
+    });
 
 })
 
