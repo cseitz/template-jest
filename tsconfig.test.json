@@ -1,0 +1,14 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "target": "ES6",
+        "moduleResolution": "nodenext",
+        "paths": {
+            "~/*": ["./src/*"],
+        }
+    },
+    "include": [
+        "**/*.ts",
+        "**/*.tsx"
+    ],
+}

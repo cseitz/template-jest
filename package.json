@@ -1,0 +1,29 @@
+{
+  "name": "jest-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npm run test:jest",
+    "test:jest": "tsx --help",
+    "test:jest2": "tsx --tsconfig tsconfig.jest.json node_modules/.bin/jest --verbose",
+    "test:jest3": "node --experimental-vm-modules --loader tsx node_modules/.bin/jest --verbose",
+    "test:jest4": "NODE_OPTIONS=\"--loader tsx --experimental-vm-modules\" jest",
+    "test:jest5": "NODE_OPTIONS=\"--experimental-vm-modules\" tsx node_modules/.bin/jest --verbose",
+    "test:jest6": "NODE_OPTIONS=\"--loader tsx --experimental-vm-modules\" jest",
+    "test:jest7": "ESBK_TSCONFIG_PATH=./test/tsconfig.json NODE_OPTIONS=\"--loader tsx --experimental-vm-modules\" jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tsx": "^3.12.3",
+    "typescript": "^5.0.0-beta"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.4.0",
+    "jest": "^29.4.3",
+    "ts-jest": "^29.0.5"
+  }
+}
