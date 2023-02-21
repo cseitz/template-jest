@@ -1,4 +1,6 @@
+import { msg } from './heya';
 
+console.log(msg);
 
 export class Stack<T> {
     public top: number;
